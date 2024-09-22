@@ -1,0 +1,44 @@
+#invite {
+    border: 2px solid pink;
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    height: 100vh;
+    overflow: hidden;
+    padding: 1.25rem;
+    gap: 1.25rem;
+}
+
+aside {
+    background-image: url(../assets/Background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    padding: 2rem 2rem 34.5rem 2rem;
+}
+
+aside .aside-container {
+    max-width: 32rem;
+    color: white;
+}
+
+aside .aside-container img {
+    height: 3rem;
+    width: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+main {
+    overflow-y: auto;
+    padding: 5rem 8.125rem 5rem 8.125rem;
+    border-radius: 0.75rem;
+    background-color: var(--shape-body);
+}
+
+main .main-container {
+    border: 2px solid greenyellow;
+    width: 100%;
+    max-width: 33rem;
+    color: white;
+}
