@@ -1,7 +1,6 @@
 #invite {
-    border: 2px solid pink;
     display: grid;
-    grid-template-columns: 1fr 2.5fr;
+    grid-template-columns: 1fr 2fr;
     height: 100vh;
     overflow: hidden;
     padding: 1.25rem;
@@ -18,27 +17,16 @@ aside {
     padding: 2rem 2rem 34.5rem 2rem;
 }
 
-aside .aside-container {
-    max-width: 32rem;
-    color: white;
-}
-
 aside .aside-container img {
     height: 3rem;
     width: 2.8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 main {
     overflow-y: auto;
+    scrollbar-width: none;
     padding: 5rem 8.125rem 5rem 8.125rem;
     border-radius: 0.75rem;
     background-color: var(--shape-body);
-}
-
-main .main-container {
-    border: 2px solid greenyellow;
-    width: 100%;
-    max-width: 33rem;
-    color: white;
 }

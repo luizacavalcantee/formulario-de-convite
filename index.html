@@ -27,11 +27,92 @@
             <div class="main-container">
                 <h2>Crie seu convite</h2>
                 <form method="post" enctype="multipart/form-data">
-                    <fieldset class="info">oi</fieldset>
-                    <fieldset class="customization">oi</fieldset>
-                    <fieldset class="contact-details">oi</fieldset>
-                    <div class="terms-wrapper input-wrapper checkbox-wrapper">oi</div>
-                    <div class="actions-wrapper">oi</div>
+                    <fieldset class="info">
+                        <legend>
+                            <div class="tt-input">
+                                <img src="assets/icons/calendar.svg" alt="calendário">
+                                <h3>Sobre o evento</h3>
+                            </div>
+                        </legend>
+                        <div class="input-wrapper">
+                            <label for="event-name">Título</label>
+                            <input 
+                                type="text"
+                                id="event-name"
+                                name="event-name"
+                                placeholder="Nome do evento">
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-1">
+                                <label for="start-date">Início</label>
+                                <input 
+                                    type="date"
+                                    id="start-date"
+                                    name="start-date"
+                                    lang="pt-BR">
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="end-date">Fim</label>
+                                <input 
+                                    type="date"
+                                    id="end-date"
+                                    name="end-date"
+                                    lang="pt-BR">
+                            </div>
+                        </div>
+
+                        <div class="flex">
+                            <div class="input-wrapper flex-1">
+                                <label for="type">Tipo</label>
+                                <input 
+                                    type="text"
+                                    id="type"
+                                    name="type"
+                                    placeholder="Presencial">
+                            </div>
+                            <div class="input-wrapper flex-1">
+                                <label for="local">Local</label>
+                                <input 
+                                    type="text"
+                                    id="local"
+                                    name="local"
+                                    placeholder="Link ou endereço">
+                            </div>
+                        </div>
+
+                        <div class="textarea-wrapper">
+                            <label for="description">Descrição</label>
+                            <textarea
+                                name="description"
+                                id="description"
+                                cols="30"
+                                rows="5"
+                                placeholder="Escreva sobre os detalhes do evento"
+                            ></textarea>
+                        </div>
+                    </fieldset> 
+
+                    <fieldset class="customization">
+                        <legend>
+                            <div class="tt-input">
+                                <img src="assets/icons/paintbrush-vertical.svg" alt="Ícone de pincel">
+                                <h3>Personalização</h3>
+                            </div>
+                        </legend>
+                    </fieldset>
+
+                    <fieldset class="contact-details">
+                        <legend>
+                            <div class="tt-input">
+                                <img src="assets/icons/contact.svg" alt="Ícone de contato">
+                                <h3>Dados para contato</h3>
+                            </div>
+                        </legend>
+                    </fieldset>
+
+                    <div class="terms-wrapper input-wrapper checkbox-wrapper"></div>
+                    <div class="actions-wrapper"></div>
                 </form>
             </div>
         </main>
