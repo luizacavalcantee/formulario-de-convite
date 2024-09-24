@@ -13,6 +13,21 @@ label {
     font: var(--body-sm);
     color: var(--text-body);
     display: block;
+}
+
+.info label {
+    margin-bottom: 0.75rem;
+}
+
+.customization label {
+    margin-bottom: 1rem;
+}
+
+.radio-inner label {
+    margin-bottom: 0;
+}
+
+.contact-details label {
     margin-bottom: 0.75rem;
 }
 
@@ -21,8 +36,4 @@ textarea:focus,
 input[type="date"]:focus-within {
     outline: 1px solid var(--brand-light);
     border: 2px solid transparent;
-}
-
-.info .flex {
-    gap: 1rem;
 }

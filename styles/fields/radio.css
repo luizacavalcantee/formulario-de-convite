@@ -1,0 +1,104 @@
+.flex-colors {
+    .radio-wrapper {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+    }
+    
+    .radio-inner {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .radio-inner input {
+        width: 1rem;
+        aspect-ratio: 1 / 1;   
+        border-radius: 100%;
+        transition: 0.2s ease-in-out;
+        border: 0.4rem solid #2d3136;
+    }
+    
+    .radio-inner input#blue {
+        background-color: var(--brand-light);
+    }
+    
+    .radio-inner input#navy {
+        background-color: var(--navy);
+    }
+    
+    .radio-inner input#purple {
+        background-color: var(--purple);
+    }
+    
+    .radio-inner input#fuschia {
+        background-color: var(--fushia);
+    }
+    
+    .radio-inner input#pink {
+        background-color: var(--pink);
+    }
+    
+    .radio-inner input#red {
+        background-color: var(--danger);
+    }
+    
+    .radio-inner input#orange {
+        background-color: var(--orange);
+    }
+    
+    .radio-inner input#yellow {
+        background-color: var(--yellow);
+    }
+    
+    .radio-inner input#lime {
+        background-color: var(--lime);
+    }
+    
+    .radio-inner input#green {
+        background-color: var(--green);
+    }
+    
+    .radio-inner input#cyan {
+        background-color: var(--cyan);
+    }
+}
+
+.flex-theme {
+    .radio-wrapper {
+        display: grid;
+        justify-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+    }
+
+    .radio-inner {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid transparent;
+        outline: 1px solid var(--input-stroke);    
+        text-align: center;
+        position: relative;
+        border-radius: 0.5rem;
+        background-color: var(--shape-button);
+        transition: 0.2s ease-in-out;
+        padding: 0.25rem;
+
+        img {
+            width: 100%;
+            margin-bottom: 0.5rem;
+        }
+        
+        & input {
+            position: absolute;
+            transition: 0.2s ease-in-out;
+            border-radius: 0.5rem;
+            width: 100%;
+            height: 100%;
+            outline: 2px solid var(--input-stroke);
+            opacity: 0;
+            cursor: pointer;
+            }
+    }
+
+}
