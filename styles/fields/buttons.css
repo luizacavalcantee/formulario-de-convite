@@ -1,0 +1,60 @@
+.button-wrapper {
+    display: inline-flex;
+    position: relative;
+}
+
+.button-wrapper input {
+    width: 4rem;
+    height: 2rem;
+    border-radius: 999px;
+}
+
+.button-wrapper .click {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 999px;
+    background-color: var(--input-base);
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+.button-wrapper .click:before {
+    content: '';
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 999px;
+    background-color: var(--input-stroke);
+    transition: 0.4s;
+    top: 0.2rem;
+    left: 0.25rem;
+}
+
+.button-wrapper label.theme {
+    position: absolute;
+    top: 0.35rem;
+    left: 5rem;
+}
+
+.button-wrapper input:checked + .click {
+    background-color: var(--brand-light);
+    outline: 1px solid var(--input-stroke);
+}
+
+.button-wrapper input:checked + .click:before {
+    transform: translateX(1.9rem);
+    background-color: var(--text-heading);
+}
+
+.button-wrapper input:checked + .click + label.theme:before {
+    content: "Claro";
+}
+
+.button-wrapper label.theme:before {
+    content: "Escuro";
+}
