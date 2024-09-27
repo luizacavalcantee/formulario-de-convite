@@ -1,15 +1,16 @@
-.button-wrapper {
+.switch {
     display: inline-flex;
     position: relative;
 }
 
-.button-wrapper input {
+.switch input {
+    appearance: none;
     width: 4rem;
     height: 2rem;
     border-radius: 999px;
 }
 
-.button-wrapper .click {
+.switch .click {
     position: absolute;
     top: 0;
     left: 0;
@@ -19,42 +20,45 @@
     height: 2rem;
     border-radius: 999px;
     background-color: var(--input-base);
+    border: 1px solid var(--input-stroke);
+    -webkit-transition: 0.4s;
     transition: 0.4s;
     cursor: pointer;
 }
 
-.button-wrapper .click:before {
+.switch .click:before {
     content: '';
     position: absolute;
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 999px;
     background-color: var(--input-stroke);
     transition: 0.4s;
-    top: 0.2rem;
+    bottom: 0.2rem;
     left: 0.25rem;
 }
 
-.button-wrapper label.theme {
-    position: absolute;
-    top: 0.35rem;
-    left: 5rem;
+.switch label {
+    margin-top: 0.4rem;
+    margin-left: 0.75rem;
 }
 
-.button-wrapper input:checked + .click {
+.switch input:checked + .click {
     background-color: var(--brand-light);
-    outline: 1px solid var(--input-stroke);
+    /*outline: 1px solid var(--input-stroke);*/
 }
 
-.button-wrapper input:checked + .click:before {
+.switch input:checked + .click:before {
+    -webkit-transform: translateX(1.9rem);
+    -ms-transform: translateX(1.9rem);
     transform: translateX(1.9rem);
     background-color: var(--text-heading);
 }
 
-.button-wrapper input:checked + .click + label.theme:before {
+.switch input:checked + .click + label.theme:before {
     content: "Claro";
 }
 
-.button-wrapper label.theme:before {
+.switch label.theme:before {
     content: "Escuro";
 }

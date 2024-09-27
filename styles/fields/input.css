@@ -6,6 +6,8 @@ input, textarea {
     outline: 1px solid var(--input-stroke);
     padding: 0.8rem 1rem;
     font: var(--body-md);
+    color: var(--input-placeholder);
+    caret-color: var(--input-placeholder);
     background-color: var(--input-base);
 }
 
@@ -15,25 +17,25 @@ label {
     display: block;
 }
 
-.info label {
-    margin-bottom: 0.75rem;
-}
-
-.customization label {
-    margin-bottom: 1rem;
-}
-
-.radio-inner label {
-    margin-bottom: 0;
-}
-
-.contact-details label {
-    margin-bottom: 0.75rem;
+input:hover,
+textarea:hover {
+    outline: 1px solid var(--brand-light);
+    border: 2px solid transparent;
 }
 
 input:focus,
-textarea:focus,
-input[type="date"]:focus-within {
+textarea:focus {
     outline: 1px solid var(--brand-light);
     border: 2px solid transparent;
+}
+
+input[type="date"] {
+    position: relative;
+    &::-webkit-calendar-picker-indicator {
+        opacity: 0;
+    }
+}
+
+.input-wrapper:has([disabled]) {
+    opacity: .5;
 }

@@ -35,54 +35,59 @@
                             </div>
                         </legend>
                         <div class="input-wrapper">
-                            <label for="event-name">Título</label>
+                            <label for="event-name" class="mb-75">Título</label>
                             <input 
                                 type="text"
                                 id="event-name"
                                 name="event-name"
-                                placeholder="Nome do evento">
+                                placeholder="Nome do evento"
+                                required>
                         </div>
 
                         <div class="flex">
                             <div class="input-wrapper flex-1">
-                                <label for="start-date">Início</label>
+                                <label for="start-date" class="mb-75">Início</label>
                                 <input 
                                     type="date"
                                     id="start-date"
                                     name="start-date"
-                                    placeholder="DD/MM/AAAA, --:--">
+                                    class="input-dark"
+                                    required>
                             </div>
                             <div class="input-wrapper flex-1">
-                                <label for="end-date">Fim</label>
+                                <label for="end-date" class="mb-75">Fim</label>
                                 <input 
                                     type="date"
                                     id="end-date"
                                     name="end-date"
-                                    placeholder="DD/MM/AAAA, --:--">
+                                    class="input-dark"
+                                    required>
                             </div>
                         </div>
 
                         <div class="flex">
                             <div class="input-wrapper flex-1">
-                                <label for="type">Tipo</label>
+                                <label for="type" class="mb-75">Tipo</label>
                                 <input 
                                     type="text"
                                     id="type"
                                     name="type"
-                                    placeholder="Presencial">
+                                    placeholder="Presencial"
+                                    required>
                             </div>
                             <div class="input-wrapper flex-1">
-                                <label for="local">Local</label>
+                                <label for="local" class="mb-75">Local</label>
                                 <input 
                                     type="text"
                                     id="local"
                                     name="local"
-                                    placeholder="Link ou endereço">
+                                    placeholder="Link ou endereço"
+                                    required>
                             </div>
                         </div>
 
                         <div class="textarea-wrapper">
-                            <label for="description">Descrição</label>
+                            <label for="description" class="mb-75">Descrição</label>
                             <textarea
                                 name="description"
                                 id="description"
@@ -101,7 +106,7 @@
                             </div>
                         </legend>
                         <div class="flex-colors">
-                            <label>Cor principal</label>
+                            <label class="mb-1">Cor principal</label>
                             <div class="radio-wrapper">
                                 <div class="radio-inner">
                                     <input type="radio" name="color" id="blue" checked>
@@ -139,7 +144,7 @@
                             </div>
                         </div>
                         <div class="flex-theme">
-                            <label>Tema do evento</label>
+                            <label class="mb-1">Tema do evento</label>
                             <div class="radio-wrapper">
                                 <div class="radio-inner">
                                     <img class="image-card" src="assets/images/Image-1.png" alt="Bolo de aniversário">
@@ -203,19 +208,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex">
-                            <div class="flex-1">
-                                <label>Estilo</label>
-                                <div class="button-wrapper">
-                                    <label class="switch">
-                                      <input type="checkbox" id="button">
-                                      <span class="click"></span>
-                                      <label for="style" class="theme"></label>
-                                    </label>
-                                </div>                      
+                        <div class="input-wrapper flex-2">
+                            <div class="input-group">
+                                <label class="mb-1">Estilo</label>
+                                <label class="switch">
+                                  <input type="checkbox" id="button">
+                                  <span class="click"></span>
+                                  <label for="style" class="theme"></label>
+                                </label>
+                            </div>                      
                             </div>
                             <div class="flex-2">
-                                <label>Foto de capa</label>
+                                <label class="mb-1">Foto de capa</label>
                             </div>
                         </div>
                     </fieldset>
@@ -228,7 +232,7 @@
                             </div>
                         </legend>
                         <div class="input-wrapper">
-                            <label for="name">Nome</label>
+                            <label for="name" class="mb-75">Nome</label>
                             <input 
                                 type="text"
                                 id="name"
@@ -238,7 +242,7 @@
 
                         <div class="flex">
                             <div class="input-wrapper flex-1">
-                                <label for="email">Email</label>
+                                <label for="email" class="mb-75">Email</label>
                                 <input 
                                     type="email"
                                     id="email"
@@ -246,7 +250,7 @@
                                     placeholder="exemplo@email.com">
                             </div>
                             <div class="input-wrapper flex-1">
-                                <label for="phone">Telefone</label>
+                                <label for="phone" class="mb-75">Telefone</label>
                                 <input 
                                     type="tel"
                                     id="phone"
@@ -256,8 +260,38 @@
                         </div>
                     </fieldset>
 
-                    <div class="terms-wrapper input-wrapper checkbox-wrapper"></div>
-                    <div class="actions-wrapper"></div>
+                    <footer>
+                        <div class="terms">
+                            <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                <div class="checkbox-image"></div>
+                                <input type="checkbox" name="term" id="term">
+                                <label for="term">
+                                    Li e concordo com os <strong> Termos e Condições</strong> e com a <strong>Política de Privacidade</strong> 
+                                </label>
+                            </div>
+                            <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                <div class="checkbox-image"></div>
+                                <input type="checkbox" name="term" id="term">
+                                <label for="term">
+                                    Aceito receber atualizações e promoções por e-mail
+                                </label>
+                            </div>
+                            <div class="terms-wrapper input-wrapper checkbox-wrapper">
+                                <div class="checkbox-image"></div>
+                                <input type="checkbox" name="term" id="term">
+                                <label for="term">
+                                    Aceito receber atualizações e promoções por SMS 
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="actions-wrapper">
+                            <button type="submit" id="submit-button">
+                                <img src="./assets/icons/ticket.svg" alt="ícone de convite">
+                                Gerar convite
+                            </button>
+                        </div>    
+                    </footer>
                 </form>
             </div>
         </main>

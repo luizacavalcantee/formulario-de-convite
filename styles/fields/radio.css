@@ -62,6 +62,17 @@
     .radio-inner input#cyan {
         background-color: var(--cyan);
     }
+
+    .radio-inner input:hover {
+        transition: 0.2s ease-in-out;
+        border: 0.4rem solid var(--shape-hover);
+        cursor: pointer;
+    }
+
+    .radio-inner input:checked {
+        border: 0.4rem solid var(--shape-hover);
+        outline: 2px solid var(--brand-light);
+    }
 }
 
 .flex-theme {
@@ -98,7 +109,7 @@
             outline: 2px solid var(--input-stroke);
             opacity: 0;
             cursor: pointer;
-            }
+        }
     }
 
 }
