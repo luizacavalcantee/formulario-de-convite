@@ -1,0 +1,61 @@
+.toggle-wrapper {
+    margin-top: 0.75rem;
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 101%;
+    height: 3.1rem;
+    border-radius: 0.5rem;
+    background-color: var(--input-base);
+    outline: 1px solid var(--input-stroke);
+
+}
+
+.toggle-wrapper input[type="radio"] {
+  display: none;
+}
+
+.toggle-wrapper label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+}
+
+.toggle-wrapper .toggle-bg {
+  position: absolute;
+  left: 0.25rem;
+  top: 0.25rem;
+  bottom: 0.25rem;
+  width: calc(50% - 0.25rem);
+  background-color: var(--input-stroke);
+  border-radius: 0.3rem;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+.toggle-wrapper input#presencial:checked ~ .toggle-bg {
+  transform: translateX(0);
+}
+
+.toggle-wrapper input#remoto:checked ~ .toggle-bg {
+  transform: translateX(100%);
+}
+
+
+.toggle-wrapper input:checked + label .icon img {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(68%) saturate(1794%) hue-rotate(177deg) brightness(98%) contrast(101%);
+}
+
+.input-row {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.local {
+  width: 100%;
+}

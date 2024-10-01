@@ -2,13 +2,48 @@ input, textarea {
     appearance: none;
     width: 100%;
     border-radius: 0.5rem;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     outline: 1px solid var(--input-stroke);
     padding: 0.8rem 1rem;
     font: var(--body-md);
     color: var(--input-placeholder);
     caret-color: var(--input-placeholder);
     background-color: var(--input-base);
+
+    &:hover {
+        border-color: var(--brand-light);
+        outline: 1px solid var(--brand-light);
+    }
+      
+    &:focus {
+        border-color: var(--brand-light);
+        outline: none;
+    }
+
+    &[required] + .error {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    
+        font: var(--body-xs);
+        color: var(--danger);
+    
+        margin-top: 0.5rem;
+    }
+    
+    &:valid + .error {
+        display: none;
+    }
+    
+    &:not(:focus):invalid {
+        border: 1px solid transparent;
+    }
+    &:not(:focus):invalid + .error {
+        display: none;
+    }
+    &:invalid {
+        border: 2px solid var(--danger);
+    }
 }
 
 label {
@@ -17,17 +52,6 @@ label {
     display: block;
 }
 
-input:hover,
-textarea:hover {
-    outline: 1px solid var(--brand-light);
-    border: 2px solid transparent;
-}
-
-input:focus,
-textarea:focus {
-    outline: 1px solid var(--brand-light);
-    border: 2px solid transparent;
-}
 
 input[type="date"] {
     position: relative;
@@ -38,4 +62,12 @@ input[type="date"] {
 
 .input-wrapper:has([disabled]) {
     opacity: .5;
+}
+
+.input-group {
+    label {
+        mb-1{
+            margin-bottom: 1.3rem;
+        }
+    }
 }

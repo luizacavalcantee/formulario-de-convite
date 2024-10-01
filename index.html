@@ -40,8 +40,7 @@
                                 type="text"
                                 id="event-name"
                                 name="event-name"
-                                placeholder="Nome do evento"
-                                required>
+                                placeholder="Nome do evento">
                         </div>
 
                         <div class="flex">
@@ -51,8 +50,7 @@
                                     type="date"
                                     id="start-date"
                                     name="start-date"
-                                    class="input-dark"
-                                    required>
+                                    class="input-dark">
                             </div>
                             <div class="input-wrapper flex-1">
                                 <label for="end-date" class="mb-75">Fim</label>
@@ -60,20 +58,30 @@
                                     type="date"
                                     id="end-date"
                                     name="end-date"
-                                    class="input-dark"
-                                    required>
+                                    class="input-dark">
                             </div>
                         </div>
 
                         <div class="flex">
                             <div class="input-wrapper flex-1">
                                 <label for="type" class="mb-75">Tipo</label>
-                                <input 
-                                    type="text"
-                                    id="type"
-                                    name="type"
-                                    placeholder="Presencial"
-                                    required>
+                                <div class="toggle-wrapper">
+                                    <input type="radio" id="presencial" name="toggle" checked>
+                                    <label for="presencial">
+                                      <span class="icon">
+                                        <img src="assets/icons/box.svg" alt="Presencial">
+                                      </span>
+                                    </label>
+                                  
+                                    <input type="radio" id="remoto" name="toggle" >
+                                    <label for="remoto">
+                                      <span class="icon">
+                                        <img src="assets/icons/box-1.svg" alt="Remoto">
+                                      </span>
+                                    </label>
+                                  
+                                    <span class="toggle-bg"></span>
+                                </div>
                             </div>
                             <div class="input-wrapper flex-1">
                                 <label for="local" class="mb-75">Local</label>
@@ -81,8 +89,7 @@
                                     type="text"
                                     id="local"
                                     name="local"
-                                    placeholder="Link ou endereço"
-                                    required>
+                                    placeholder="Link ou endereço">
                             </div>
                         </div>
 
@@ -208,18 +215,24 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="input-wrapper flex-2">
-                            <div class="input-group">
+                        <div class="flex-row">
+                            <div class="input-group flex-1">
                                 <label class="mb-1">Estilo</label>
                                 <label class="switch">
-                                  <input type="checkbox" id="button">
-                                  <span class="click"></span>
-                                  <label for="style" class="theme"></label>
+                                    <input type="checkbox" id="button">
+                                    <span class="click"></span>
+                                    <label for="style" class="theme"></label>
                                 </label>
                             </div>                      
-                            </div>
-                            <div class="flex-2">
+                            <div class="droparea flex-2">             
                                 <label class="mb-1">Foto de capa</label>
+                                <div class="flex-row">
+                                    <div class="dropzone">
+                                        <input type="file" id="cover-file" name="cover-file" required>
+                                        <img src="./assets/icons/dropzone.svg" alt="">
+                                    </div>
+                                    <p id="drop-text">Nenhum arquivo selecionado</p>
+                                </div>
                             </div>
                         </div>
                     </fieldset>
@@ -237,7 +250,12 @@
                                 type="text"
                                 id="name"
                                 name="name"
-                                placeholder="Nome completo">
+                                placeholder="Nome completo"
+                                required>
+                                <div class="error">
+                                    <img src="/assets/icons/circle-alert.svg" alt="ícone de erro">
+                                    <span>Campo obrigatório</span>
+                                </div>
                         </div>
 
                         <div class="flex">
